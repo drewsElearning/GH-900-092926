@@ -1,0 +1,145 @@
+name: Bug Report
+description: Report a bug or defect in the project.
+title: "[BUG] "
+labels:
+  - bug
+projects:
+  - OWNER/PROJECT_NUMBER
+assignees: []
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Bug Report
+
+        Please complete all required fields to help us triage and resolve the issue efficiently.
+
+  - type: input
+    id: summary
+    attributes:
+      label: Bug Summary
+      description: Brief description of the issue.
+      placeholder: User receives an error when submitting a form.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How serious is this issue?
+      options:
+        - Critical
+        - High
+        - Medium
+        - Low
+    validations:
+      required: true
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      options:
+        - P1
+        - P2
+        - P3
+        - P4
+    validations:
+      required: true
+
+  - type: dropdown
+    id: project-stage
+    attributes:
+      label: Project Board Status
+      description: Initial status when created.
+      options:
+        - To Triage
+        - Backlog
+        - Ready
+    validations:
+      required: true
+
+  - type: input
+    id: estimate
+    attributes:
+      label: Estimate (Story Points or Hours)
+      description: Used for project tracking.
+      placeholder: "3"
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      placeholder: Windows 11, Edge 139, Production
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps To Reproduce
+      description: Detailed reproduction steps.
+      placeholder: |
+        1. Navigate to...
+        2. Click...
+        3. Observe...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      placeholder: Describe expected results.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      placeholder: Describe actual results.
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Business Impact
+      description: How are users affected?
+      placeholder: Users cannot complete checkout.
+
+  - type: textarea
+    id: workaround
+    attributes:
+      label: Known Workaround
+      placeholder: Temporary fix if known.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / Error Messages
+      render: shell
+
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: Paste screenshots or links here.
+
+  - type: input
+    id: reporter
+    attributes:
+      label: Reported By
+      placeholder: GitHub username
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Definition of Done
+      description: What must be completed before this bug can be closed?
+      placeholder: |
+        - Root cause identified
+        - Fix tested
+        - Documentation updated
+        - PR approved
