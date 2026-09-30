@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f5">
+  <meta name="description" content="A guided, interactive study experience for the GitHub Foundations GH-900 curriculum.">
+  <title>GitHub Foundations | GH-900</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to lesson content</a>
+  <header class="topbar">
+    <a class="brand" href="#overview" aria-label="GitHub Foundations home">
+      <span class="brand-mark" aria-hidden="true">GH</span>
+      <span class="brand-name">GitHub <span>Foundations</span></span>
+    </a>
+    <nav class="top-nav" aria-label="Main navigation">
+      <button class="nav-link is-active" data-view="overview" aria-current="page">Overview</button>
+      <button class="nav-link" data-view="curriculum">Curriculum</button>
+      <button class="nav-link" data-view="resources">Resources</button>
+    </nav>
+    <button class="mobile-menu" id="menu-toggle" aria-expanded="false" aria-controls="course-sidebar" aria-label="Open course navigation">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <div class="page-layout">
+    <aside class="sidebar" id="course-sidebar" aria-label="Course navigation">
+      <div class="sidebar-heading">
+        <span class="eyebrow">YOUR COURSE</span>
+        <span class="course-code">GH-900</span>
+      </div>
+      <div class="sidebar-progress">
+        <div class="progress-copy"><span>Course progress</span><strong id="sidebar-progress-label">0%</strong></div>
+        <div class="progress-track" role="progressbar" aria-label="Course progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" id="sidebar-progress-bar"><span></span></div>
+      </div>
+      <div class="module-list" id="module-list" aria-label="Curriculum modules"></div>
+      <a class="sidebar-reference" href="https://learn.microsoft.com/credentials/certifications/github-foundations/" target="_blank" rel="noreferrer">
+        <span class="reference-icon" aria-hidden="true">↗</span>
+        <span><strong>Certification guide</strong><small>Microsoft Learn</small></span>
+      </a>
+    </aside>
+
+    <main id="main-content" class="main-content" tabindex="-1">
+      <div id="app" aria-live="polite"></div>
+    </main>
+  </div>
+</body>
+</html>

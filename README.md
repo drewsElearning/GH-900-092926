@@ -4,6 +4,10 @@ Welcome to the **GH-900 Learning Repository**. This repository is designed to he
 
 Whether you are a student, IT professional, developer, project manager, or someone new to GitHub, this repository provides study materials, notes, labs, examples, and resources to help you understand the core concepts required for the GH-900 certification.
 
+## Interactive Learning Experience
+
+Open `index.html` in a browser to use the responsive course experience. It follows the modules below, includes workflow visualizations and knowledge checks, and saves completed sections in that browser on your device. No install or build step is required. For current certification details, use the [official Microsoft Learn certification page](https://learn.microsoft.com/credentials/certifications/github-foundations/).
+
 ---
 
 # Learning Objectives
